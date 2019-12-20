@@ -4,12 +4,14 @@ services:
     image: rancher/rancher:v2.3.3
     volumes: 
       - ./rancher:/var/lib/rancher
-    expose:
-      - 80
+    # expose:
+    #   - 80
+    ports:
+      - 80:80
     environment:
       - VIRTUAL_HOST=fury.nize.ai
       - LETSENCRYPT_HOST=fury.nize.ai
-      - LETSENCRYPT_EMAIL=yosapol@humanize.co.th
+      - LETSENCRYPT_EMAIL=paripol.toopiroh@gmail.com
     restart: unless-stopped
 networks:
   default:
