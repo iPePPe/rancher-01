@@ -9,8 +9,8 @@ services:
     # ports:
     #   - 80:80
     environment:
-      - VIRTUAL_HOST=rancher-01.jitrak.com
-      - LETSENCRYPT_HOST=rancher-01.jitrak.com
+      - VIRTUAL_HOST=rancher-01.paripol.com
+      - LETSENCRYPT_HOST=rancher-01.paripol.com
       - LETSENCRYPT_EMAIL=paripol.toopiroh@gmail.com
     restart: unless-stopped
 networks:
