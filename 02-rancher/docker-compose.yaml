@@ -1,0 +1,17 @@
+version: "3.7"
+services:
+  rancher:
+    image: rancher/rancher:v2.3.3
+    volumes: 
+      - ./rancher:/var/lib/rancher
+    expose:
+      - 80
+    environment:
+      - VIRTUAL_HOST=fury.nize.ai
+      - LETSENCRYPT_HOST=fury.nize.ai
+      - LETSENCRYPT_EMAIL=yosapol@humanize.co.th
+    restart: unless-stopped
+networks:
+  default:
+    external:
+      name: nginx-proxy
