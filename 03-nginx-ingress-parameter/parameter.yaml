@@ -1,0 +1,19 @@
+---
+  controller: 
+    replicaCount: "3"
+    resources: 
+      limits: 
+        cpu: "300m"
+        memory: "128Mi"
+      requests: 
+        cpu: "100m"
+        memory: "128Mi"
+  defaultBackend: 
+    replicaCount: "3"
+    resources: 
+      limits: 
+        cpu: "10m"
+        memory: "10Mi"
+      requests: 
+        cpu: "10m"
+        memory: "10Mi"
